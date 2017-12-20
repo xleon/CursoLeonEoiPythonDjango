@@ -5,6 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Django leon 2017",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "C:\\Users\\Charly\\.virtualenvs\\CursoLeonPythonDjango-b2P0ih-P\\Scripts\\python.exe",
+            "program": "${workspaceFolder}/django_leon_2017/manage.py",
+            "cwd": "${workspaceFolder}/django_leon_2017",
+            "args": [
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ],
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput",
+                "DjangoDebugging"
+            ]
+        },
+        {
             "name": "Python: Terminal (integrated)",
             "type": "python",
             "request": "launch",
