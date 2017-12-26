@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{% static "hola.js" %}"></script>
+    <meta charset="UTF-8">
+    <title>Hola es el titulo</title>
+</head>
+<body>
+{% for figther in fighters %}
+    Nombre: {{ figther.alias }}<br>
+    Avatar: {{ figther.avatar.url }}<br>
+    Force: {{ figther.force }}<br>
+    Skill: {{ figther.skill }}<br>
+    --------------------------<br><br>
+{% endfor %}
+
+</body>
+</html>

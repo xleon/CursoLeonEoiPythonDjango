@@ -19,7 +19,7 @@ class Player:
 class FightGame:
     DEFAULT_LIVES = 2
     DEFAULT_POWER = 10
-
+    
     def __init__(self, author):
         self.author = author
         self.swapi = swapi_client.Swapi()

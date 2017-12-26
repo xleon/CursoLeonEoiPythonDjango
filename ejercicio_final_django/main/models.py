@@ -42,7 +42,7 @@ class Combat(models.Model):
     date = models.DateTimeField('Fecha/hora', auto_now=True)
     fighter1 = models.ForeignKey(Fighter, verbose_name='Luchador 1', related_name='figher1', on_delete=models.CASCADE)
     fighter2 = models.ForeignKey(Fighter, verbose_name='Luchador 2', related_name='fither2', on_delete=models.CASCADE)
-    tournament = models.ForeignKey(Tournament, verbose_name='Torneo', on_delete=models.CASCADE)
+    tournament = models.ForeignKey(Tournament, verbose_name='Torneo', related_name='combats', on_delete=models.CASCADE)
 
     def __str__(self):
         return '{} vs {}'.format(self.fighter1.alias, self.fighter2.alias)
