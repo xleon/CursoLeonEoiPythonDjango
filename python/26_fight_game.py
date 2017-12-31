@@ -41,7 +41,7 @@ class FightGame:
             option = msvcrt.getch()
             # print(option)
 
-            if option == b'\x1b':
+            if option == b'\x1b': # esc
                 break
             if option == b'0':
                 self.__menu()
