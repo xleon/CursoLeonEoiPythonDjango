@@ -12,12 +12,12 @@ CURRENCY = '€'
 def run():
     separator = '----------------------------'
     print('\nCalculadora de IVA / IRPF')
-    print(separator + Fore.CYAN)
 
     def format_number(number):
         return '{0:,.2f}'.format(number)
 
     while True:
+        print(separator + Fore.CYAN)
         subtotal_str = input('Escribe base imponible (decimales con punto): ')
         try:
             subtotal = float(subtotal_str) if '.' in subtotal_str else int(subtotal_str)
@@ -25,13 +25,13 @@ def run():
             irpf = subtotal * IRPF_PERCENT
             total = subtotal + iva - irpf
             revenue = subtotal - irpf
-            print('\n' + Fore.WHITE + separator)
+            print(Fore.WHITE + separator)
             print('Subtotal:', format_number(subtotal), CURRENCY)
             print('IVA:', format_number(iva), CURRENCY)
             print('IRPF: -' + Fore.RED + format_number(irpf) + Fore.WHITE, CURRENCY)
-            print('Total:', Fore.BLUE + format_number(total) + Fore.WHITE, CURRENCY)
+            print('Total:', Fore.CYAN + format_number(total) + Fore.WHITE, CURRENCY)
             print('Neto:', Fore.GREEN + format_number(revenue) + Fore.WHITE, CURRENCY)
-            print(separator + '\n')
+            print(' ')
         except ValueError:
             print('formato de cantidad no válido')
         
