@@ -1,3 +1,8 @@
+"""
+Ejemplos de cómo importar módulos y funciones.
+Más información útil aquí: https://www.codementor.io/sheena/python-path-virtualenv-import-for-beginners-du107r3o1
+"""
+
 import utils
 
 utils.lib_method()
